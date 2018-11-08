@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">iphoneDroid</string>
+
+    <!-- Strings for get public repo error -->
+    <string name="empty_public_repositories">"No se han encontrado resultados</string>
+    <!-- String for search toolbar -->
+    <string name="search_repositories">Buscar repositorios...</string>
+    <!-- Loading message -->
+    <string name="loading">Cargando...</string>
+    <!-- Error messages -->
+    <string name="connection_error">"Se ha producido un error de conexión"</string>
+    <string name="ok">OK</string>
+    <string name="retry">Reintentar</string>
+    <string name="error_title">Se ha producido un error</string>
+    <!-- Details view -->
+    <string name="owner">Propietario</string>
+    <string name="contributors">Colaboradores</string>
+    <string name="forks">Forks</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet consectetur adipiscing elit sociis, proin cum per maecenas ridiculus id fermentum curae, fusce sapien sodales libero euismod posuere eu. A nam tellus magnis malesuada ornare pharetra interdum nascetur odio mus duis convallis facilisis, porttitor class curae tempor dis ultrices eu erat euismod sociosqu lacus. Dictum fermentum inceptos arcu aptent laoreet justo posuere sapien cras tincidunt porta lacinia tempus, fames platea orci montes consequat habitasse rhoncus class ut sollicitudin semper dis.</string>
+    <string name="contributions">Contribuciones</string>
+    <string name="description">Descripción</string>
+    <string name="issues">Issues</string>
+</resources>

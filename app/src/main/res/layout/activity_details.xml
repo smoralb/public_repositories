@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/tb_main"
+        layout="@layout/custom_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/dimen_l"
+                android:layout_height="@dimen/dimen_l"
+                android:layout_margin="@dimen/spacing_s"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_owner_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_s"
+                android:layout_marginTop="@dimen/spacing_xs"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_dimen_xl"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/iv_avatar"
+                app:layout_constraintTop_toTopOf="@id/iv_avatar"
+                tools:text="Octocat" />
+
+            <ImageView
+                android:id="@+id/external_link"
+                android:layout_width="@dimen/dimen_small"
+                android:layout_height="@dimen/dimen_small"
+                android:layout_marginStart="@dimen/spacing_m"
+                android:src="@drawable/ic_external_link"
+                app:layout_constraintBottom_toBottomOf="@id/tv_owner_name"
+                app:layout_constraintLeft_toRightOf="@id/tv_owner_name"
+                app:layout_constraintTop_toTopOf="@id/tv_owner_name" />
+
+            <TextView
+                android:id="@+id/tv_project_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_s"
+                android:layout_marginTop="@dimen/spacing_xs"
+                android:textSize="@dimen/text_dimen_l"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/iv_avatar"
+                app:layout_constraintTop_toBottomOf="@id/tv_owner_name"
+                tools:text="Hello_World" />
+
+            <include
+                android:id="@+id/l_project_info"
+                layout="@layout/project_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+            <TextView
+                android:id="@+id/description_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_s"
+                android:text="@string/description"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_dimen_l"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tv_project_description"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/l_project_info" />
+
+            <TextView
+                android:id="@+id/tv_project_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_s"
+                android:layout_marginTop="@dimen/spacing_s"
+                android:layout_marginEnd="@dimen/spacing_s"
+                app:layout_constraintLeft_toLeftOf="@id/description_title"
+                app:layout_constraintTop_toBottomOf="@id/description_title"
+                tools:text="@string/lorem_ipsum" />
+
+            <TextView
+                android:id="@+id/contributors_title"
+                fontPath="fonts/Roboto_Black.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_s"
+                android:text="@string/contributors"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_dimen_l"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/rv_contributors"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_project_description" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_contributors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_m"
+                android:padding="@dimen/spacing_xs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contributors_title" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

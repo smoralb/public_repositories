@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/spacing_xs"
+    android:paddingEnd="@dimen/spacing_xs"
+    android:paddingBottom="@dimen/spacing_s">
+
+    <TextView
+        android:id="@+id/contributors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:text="@string/contributors"
+        android:textSize="@dimen/text_dimen_m"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/separator"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_contributors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_dimen_l"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/contributors"
+        app:layout_constraintRight_toRightOf="@id/contributors"
+        app:layout_constraintTop_toBottomOf="@id/contributors"
+        tools:text="X" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/dimen_s"
+        android:layout_marginStart="@dimen/spacing_s"
+        android:alpha="0.5"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/contributors"
+        app:layout_constraintTop_toTopOf="@id/contributors" />
+
+    <TextView
+        android:id="@+id/forks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_s"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:text="@string/forks"
+        android:textSize="@dimen/text_dimen_m"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/separator"
+        app:layout_constraintRight_toLeftOf="@id/separator_2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_forks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_dimen_l"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/forks"
+        app:layout_constraintRight_toRightOf="@id/forks"
+        app:layout_constraintTop_toBottomOf="@id/forks"
+        tools:text="X" />
+
+    <View
+        android:id="@+id/separator_2"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/dimen_s"
+        android:layout_margin="@dimen/spacing_s"
+        android:layout_marginStart="@dimen/spacing_s"
+        android:alpha="0.5"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/forks"
+        app:layout_constraintRight_toLeftOf="@id/issues"
+        app:layout_constraintTop_toTopOf="@id/contributors" />
+
+    <TextView
+        android:id="@+id/issues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_s"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:text="@string/issues"
+        android:textSize="@dimen/text_dimen_m"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/separator_2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_issues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_dimen_l"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/issues"
+        app:layout_constraintRight_toRightOf="@id/issues"
+        app:layout_constraintTop_toBottomOf="@id/issues"
+        tools:text="X" />
+
+</android.support.constraint.ConstraintLayout>
